@@ -56,6 +56,6 @@ r = (-3...15)
 puts r.max
 
 results = [10, 2, 5, 12, 11, 11, 4]
-for sum in results
-  puts "Value: #{sum}"
+for ind in 0...results.size
+  puts "Index #{ind + 1}: Value #{results[ind]}"
 end
