@@ -24,7 +24,9 @@ end
 
 class Validator
   def validate(user)
-    if no_digits(user.last_name) && no_digits(user.first_name) && no_digits(user.patronim) && no_letters(user.phone_number) && CountryChecker.check(user.country) && no_digits(user.organization) && no_digits(user.position)
+    if no_digits(user.last_name) && no_digits(user.first_name) && no_digits(user.patronim) 
+	&& no_letters(user.phone_number) && CountryChecker.check(user.country) 
+	&& no_digits(user.organization) && no_digits(user.position)
       return true
     end
     false
